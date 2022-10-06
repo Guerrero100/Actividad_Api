@@ -10,13 +10,13 @@ export class store{
         this.defaultCity = 'Medellin';
         this.defaultCountry = 'CO';
     }
-}
+
 
 /* Metodo para traer del localstorage la informacion antes de guardarla */
 getLocationData()
 {
     if (localStorage.getItem('city')=== null) {
-        this.coty = this.defaultCity;
+        this.city = this.defaultCity;
     }else{
         this.city = localStorage.getItem('city');
     }
@@ -31,11 +31,13 @@ getLocationData()
         city: this.city,
         countryCode:this.countryCode
     }
-}
-
-/* Meotoo para guardar informacion en el localStorage */
-setLocationData(city, countryCode)
-{
-    localStorage.setItem('city', city);
-    localStorage.setItem('countryCode',countryCode);
+    
+    /* Meotoo para guardar informacion en el localStorage */
+    setLocationData(city, countryCode)
+        {
+        localStorage.setItem('city', city);
+        
+        localStorage.setItem('countryCode',countryCode);
+        }
+    }
 }

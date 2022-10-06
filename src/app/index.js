@@ -8,11 +8,11 @@ require('./index.css');
     const { UI } = require('./UI');
 
       /* importamos la clase store desde el archivo store */
-      const {store} = require('./store');
+      const { Store } = require('./store');
 
       //se crea una nueva instancia store
-      const store = new Store();
-      const {city, countryCode} = store.getLocationData();
+        const store = new Store();
+        const {city,countryCode} = store.setLocationData();
 
     //se crea una nueva instancia weather
     const weather = new Weather (city, countryCode);

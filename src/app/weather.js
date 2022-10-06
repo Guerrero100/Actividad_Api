@@ -28,6 +28,5 @@ async function getWeather()
       this.city = city;
       this.countryCode = countryCode;
   }
-
-
+  
 }
