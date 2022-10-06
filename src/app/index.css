@@ -1,0 +1,8 @@
+/* Estilo para el fondo del aplicativo */
+
+body{
+    background-color: #bdc3c7;
+    background: -webkit-gradient(to right, #2c3e50, #dbc3c7);
+    background: linear-gradient(to right, #2c3e50, #dbc3c7);
+    
+}
