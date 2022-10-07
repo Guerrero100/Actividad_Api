@@ -26,6 +26,7 @@ require('./index.css');
     console.log(data);  
     ui.render(data);
     }
+    
     /* Se obtiene el elemento del boton, se escucha y el evento y se realiza una funcion */
     document.getElementById('w-chage-btn').addEventListener('click', (e)=>{
 
