@@ -25,14 +25,17 @@ require('./index.css');
     const data = await weather.getWeather();
     console.log(data);  
     ui.render(data);
-    }
-    
+  }
+  
+  /* se escucha el evento y se corre la funcion */
+  document.addEventListener('DOMContentLoaded', fetchWeather);
+  
     /* Se obtiene el elemento del boton, se escucha y el evento y se realiza una funcion */
     document.getElementById('w-chage-btn').addEventListener('click', (e)=>{
 
         //se obtiene los elementos de cuidad y codigo de pais 
         const city = document.getElementById('city').value;
-        const countryCode = document.getElementById('countryCode').value;
+        const countryCode = document.getElementById('country').value;
 
         weather.chageLocation(city,countryCode);
         store.setLocationData(city, countryCode);
@@ -40,6 +43,3 @@ require('./index.css');
 
         e.preventDefault();
     });
-
-    /* se escucha el evento y se corre la funcion */
-    document.addEventListener('DOMContentLoaded', fetchWeather);

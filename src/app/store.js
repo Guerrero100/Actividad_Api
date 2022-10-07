@@ -7,7 +7,7 @@ export class store{
         this.city;
         this.countryCode;
         //se define los valores predeterminados del aplicativo
-        this.defaultCity = 'Medellin';
+        this.defaultCity = 'Medellín';
         this.defaultCountry = 'CO';
     }
 
