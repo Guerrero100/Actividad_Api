@@ -1,5 +1,5 @@
 /* Exportamos la clase para poder importarla en el index */
-export class store{
+export class Store{
 
     //Metodo constructor (se ejecuta solo)
     constructor()
@@ -7,7 +7,7 @@ export class store{
         this.city;
         this.countryCode;
         //se define los valores predeterminados del aplicativo
-        this.defaultCity = 'Medellin';
+        this.defaultCity = 'Medellín';
         this.defaultCountry = 'CO';
     }
 
@@ -15,29 +15,28 @@ export class store{
 /* Metodo para traer del localstorage la informacion antes de guardarla */
 getLocationData()
 {
-    if (localStorage.getItem('city')=== null) {
+    if (localStorage.getItem('city') === null) {
         this.city = this.defaultCity;
-    }else{
+    } else {
         this.city = localStorage.getItem('city');
     }
 
-    if (localStorage.getItem('countryCode')=== null){
+    if (localStorage.getItem('countryCode') === null){
         this.countryCode = this.defaultCountry;
-    }else{
+    } else {
         this.countryCode = localStorage.getItem('countryCode');
     }
-
+    
     return{
         city: this.city,
-        countryCode:this.countryCode
+        countryCode: this.countryCode
     }
+}
     
     /* Meotoo para guardar informacion en el localStorage */
-    setLocationData(city, countryCode)
+    setLocationData(city,countryCode)
         {
         localStorage.setItem('city', city);
-        
         localStorage.setItem('countryCode',countryCode);
         }
-    }
 }
