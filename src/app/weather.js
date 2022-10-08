@@ -8,10 +8,9 @@ export class Weather{
         this.city = 'city';
         this.countryCode = 'countryCode';
     }
-}
     /* Metodo asicronico y dentro un await (que la peticion puede tardar) */
     
-    async function getWeather()
+    async  getWeather()
     
     {
         //url de la api
@@ -28,5 +27,7 @@ export class Weather{
             this.city = city;
             this.countryCode = countryCode;
         }
-  
+        
+    }
+    
 }
